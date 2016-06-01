@@ -14,4 +14,12 @@ if (typeof variable === 'undefined' || variable === null) {
 if (typeof variable !== 'undefined' && variable !== null) {
     // variable is undefined or null
 }
+
+//~ Only for browsers
+if ("var" in window) {
+   // global variable var is defined
+} else {
+   // global variable var is not defined
+}
+
 // Check if a variable or object is defined or initialized finished
