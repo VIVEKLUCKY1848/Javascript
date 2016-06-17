@@ -187,3 +187,4 @@ Find all lines containing Javascript like "function" declaration statements:
 Find: function.*{|\w* \= function.*{|jquery.*{
 OR
 (?:(\w+(?:\.\w+)*)\s*=\s*)?function\s*(.*?)\(
+http://stackoverflow.com/questions/37803973/regex-to-match-any-javascript-jquery-function-declaration-line
