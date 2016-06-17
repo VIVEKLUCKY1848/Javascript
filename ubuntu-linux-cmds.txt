@@ -837,3 +837,20 @@ sudo rm -r /tmp/*
 sudo rm -r ~/.cache/*
 sudo rm -rf ~/.thumbs/*
 sudo updatedb
+
+Go to any directory or command's main installation directory from command-line
+cd $(whereis <command_name> or <directory_name> or <component_name> | cut -d ' ' -f2 | xargs dirname)
+Note: It will take you to it's parent directory atmost.
+Examples:
+cd $(which node_modules | xargs dirname)
+cd $(whereis node_modules | cut -d ' ' -f2)
+cd $(whereis find | cut -d ' ' -f2 | xargs dirname)
+cd $(whereis node_modules | cut -d ' ' -f2 | xargs dirname)
+cd $(whereis bower | cut -d ' ' -f2 | xargs dirname
+
+Remove enerything before last occurring(Left to right) colon/semicolon
+echo <any_text_with_quotes> | sed 's/.*://'
+echo <any_text_with_quotes> | sed 's/.*;//'
+Examples
+echo 'hd_ma_prod_customer_ro:*:123456789:john.doe' | sed 's/.*://'
+echo 'hd_ma_prod_customer_ro:*:123456789;john.doe' | sed 's/.*://'
