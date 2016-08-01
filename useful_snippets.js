@@ -26,3 +26,14 @@ if (typeof variable !== 'undefined' && variable !== null && "variable" in window
     // variable is undefined or null
 }
 // Check if a variable or object is defined or initialized finished
+
+// jQuery Find particular class based children and loop through those start
+var $lsnjQ = jQuery.noConflict();
+$lsnjQ(document).ready(function() {
+	//$lsnjQ('.read-more').colorbox({inline:true, width:"50%"});
+	$lsnjQ('#parent_id').children().find('childele.class or childele#id').each(function() {
+		//Do anything you want with $lsnjQ(this)
+		$lsnjQ(this).colorbox({inline:true, width:"50%"});
+	});
+});
+// jQuery Find particular class based children and loop through those finish
