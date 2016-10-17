@@ -37,3 +37,20 @@ $lsnjQ(document).ready(function() {
 	});
 });
 // jQuery Find particular class based children and loop through those finish
+
+// Fancybox resize according to custom height and width start:
+$cnjQ('.owlgrid').children().find('a.read-more').each(function() {
+	$cnjQ(this).click(function() {
+		var contentHref = $cnjQ(this).attr('href');
+		$cnjQ.fancybox({
+			'type': 'iframe',
+			'width': 600,
+			'height': 'auto',
+			'autoSize': false,
+			'content': $cnjQ(contentHref).show(),
+			//'content': $cnjQ(contentHref).html(),
+			'beforeLoad': function() {},
+		});
+	});
+});
+// Fancybox resize according to custom height and width finish....
